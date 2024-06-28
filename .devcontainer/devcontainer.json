@@ -3,7 +3,7 @@
 	"service": "devcontainer",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"postCreateCommand": {
-		"install development tools": "python3 -m pip install ."
+		"install development tools": "python3 -m pip install .[dev]"
 	},
 	"customizations": {
 		"vscode": {
