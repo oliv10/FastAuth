@@ -8,6 +8,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 class Token:
 
+    @staticmethod
     def create(user: User, expires_delta: timedelta | None = None) -> str:
         NOW = datetime.now()
         nbf = NOW
@@ -31,3 +32,11 @@ class Token:
 
         encoded_jwt = jwt.encode(jwt_token, SECRET_KEY, algorithm=ALGORITHM)
         return encoded_jwt
+    
+    @staticmethod
+    def validate(token) -> bool:
+        try:
+            jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+            return True
+        except:
+            return False
