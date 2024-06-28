@@ -13,4 +13,12 @@ setup(
         'redis==5.0.7',
         'passlib==1.7.4'
     ],
+    extras_require={
+        "dev": [
+            "pytest==8.2.2",
+            "pipreqs==0.5.0",
+            "fakeredis==2.23.2",
+            "pytest-cov==5.0.0"
+        ],
+    },
 )
