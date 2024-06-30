@@ -17,7 +17,7 @@ setup(
         "dev": [
             "pytest==8.2.2",
             "pipreqs==0.5.0",
-            "fakeredis==2.23.2",
+            "fakeredis==2.23.3",
             "pytest-cov==5.0.0"
         ],
     },
