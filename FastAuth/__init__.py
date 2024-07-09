@@ -1,8 +1,7 @@
-from .models import USER_ROLES
+from .models import BASE_USER_ROLES
 from .models import JWTToken
-from .models import *
-from .token import *
 
-import redis
+from redis import Redis as _Redis
+from fastapi import APIRouter as _APIRouter
 
-REDIS: redis.Redis = redis.Redis()
+from .auth import FastAuth
