@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from typing import Literal, List
 
 @dataclass
-class USER_ROLES:
+class BASE_USER_ROLES:
     ADMIN: str = 'admin'
     USER: str = 'user'
 
