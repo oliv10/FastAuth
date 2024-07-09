@@ -10,7 +10,8 @@
 			"extensions": [
 				"TabbyML.vscode-tabby",
 				"ms-azuretools.vscode-docker",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"ms-python.black-formatter"
 			]
 		}
 	}
