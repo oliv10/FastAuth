@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='FastAuth',
+    name='fastauth',
     author='Oliver Scotten',
     author_email='revi99@me.com',
     description='FastAuth is an authorization framework for FastAPI applications.',

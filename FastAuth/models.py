@@ -1,10 +1,12 @@
 from dataclasses import dataclass
 from typing import Literal, List
 
+
 @dataclass
 class BASE_USER_ROLES:
-    ADMIN: str = 'admin'
-    USER: str = 'user'
+    ADMIN: str = "admin"
+    USER: str = "user"
+
 
 # TODO: buildout model with greater typcasting controls
 @dataclass
@@ -39,6 +41,7 @@ class User:
     def dict(self):
         return self.__dict__
 
+
 @dataclass
 class DatabaseUser(User):
     password_hash: str = None
@@ -51,6 +54,7 @@ class DatabaseUser(User):
         for key in uniqueKeys:
             userDict.pop(key, None)
         return User(**userDict)
+
 
 @dataclass
 class JWTToken:
@@ -65,3 +69,10 @@ class JWTToken:
 
     def dict(self):
         return self.__dict__
+
+
+@dataclass
+class PasswordReset:
+    current_password: str
+    new_password: str
+    new_password_confirm: str
