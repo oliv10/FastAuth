@@ -1,7 +1,7 @@
 from fastapi import FastAPI, APIRouter
 from redis import Redis
 
-from fastauth2 import FastAuth
+from fastauth import FastAuth
 
 app = FastAPI()
 DB = Redis("redis", decode_responses=True)

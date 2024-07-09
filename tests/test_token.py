@@ -1,6 +1,6 @@
 import pytest
 from datetime import datetime, timedelta
-from fastauth2.token import Token, SECRET_KEY, ALGORITHM
+from fastauth.token import Token, SECRET_KEY, ALGORITHM
 import jwt
 
 # Sample User data
