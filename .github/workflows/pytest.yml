@@ -57,8 +57,7 @@ jobs:
         junitxml-path: ./pytest.xml
         pytest-xml-coverage-path: ./coverage.xml
         unique-id-for-comment: 3.x
-        title: 3.x Coverage Report
-        coverage-path-prefix: https://github.com/oliv10/FastAuth/
+        title: Python 3.x Coverage Report
   
   pytest-supported:
 
