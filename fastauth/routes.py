@@ -10,7 +10,7 @@ from fastapi.exceptions import HTTPException
 def AuthRoutes(database: fastauth._Redis, router: fastauth._APIRouter):
 
     @router.get("/user/{userID}", response_model=UUID)
-    async def getUser(userID: UUID):
+    async def get_user(userID: UUID):
         return userID
 
     @router.post("/login")
