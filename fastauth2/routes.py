@@ -1,13 +1,13 @@
-import fastauth
+import fastauth2
 from uuid import UUID
 from fastapi.security import OAuth2PasswordRequestForm
 from fastapi import Depends, Body
-from fastauth.models import User, JWTToken, PasswordReset
+from fastauth2.models import User, JWTToken, PasswordReset
 from typing import List
 from fastapi.exceptions import HTTPException
 
 
-def AuthRoutes(database: fastauth._Redis, router: fastauth._APIRouter):
+def AuthRoutes(database: fastauth2._Redis, router: fastauth2._APIRouter):
 
     @router.get("/user/{userID}", response_model=UUID)
     async def getUser(userID: UUID):
