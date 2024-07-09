@@ -50,14 +50,14 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -vv --junitxml=pytest.xml --cov-report "xml:coverage.xml" --cov=fastauth tests/
-    # - name: Pytest coverage comment
-    #   if: always() && github.event_name == 'pull_request'
-    #   uses: MishaKav/pytest-coverage-comment@main
-    #   with:
-    #     junitxml-path: ./pytest.xml
-    #     pytest-xml-coverage-path: ./coverage.xml
-    #     unique-id-for-comment: ${{matrix.python-version}}
-    #     title: ${{matrix.python-version}} Coverage Report
+    - name: Pytest coverage comment
+      if: always() && github.event_name == 'pull_request'
+      uses: MishaKav/pytest-coverage-comment@main
+      with:
+        junitxml-path: ./pytest.xml
+        pytest-xml-coverage-path: ./coverage.xml
+        unique-id-for-comment: 3.x
+        title: 3.x Coverage Report
   
   pytest-supported:
 
@@ -88,11 +88,11 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -vv --junitxml=pytest.xml --cov-report "xml:coverage.xml" --cov=fastauth tests/
-    - name: Pytest coverage comment
-      if: always() && github.event_name == 'pull_request'
-      uses: MishaKav/pytest-coverage-comment@main
-      with:
-        junitxml-path: ./pytest.xml
-        pytest-xml-coverage-path: ./coverage.xml
-        unique-id-for-comment: ${{matrix.python-version}}
-        title: ${{matrix.python-version}} Coverage Report
+    # - name: Pytest coverage comment
+    #   if: always() && github.event_name == 'pull_request'
+    #   uses: MishaKav/pytest-coverage-comment@main
+    #   with:
+    #     junitxml-path: ./pytest.xml
+    #     pytest-xml-coverage-path: ./coverage.xml
+    #     unique-id-for-comment: ${{matrix.python-version}}
+    #     title: ${{matrix.python-version}} Coverage Report
