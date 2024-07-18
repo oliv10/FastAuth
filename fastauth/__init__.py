@@ -4,4 +4,4 @@ from .models import JWTToken
 from redis import Redis as _Redis
 from fastapi import APIRouter as _APIRouter
 
-from .auth import FastAuth
+from .fastauth import FastAuth
