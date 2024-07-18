@@ -2,9 +2,11 @@ import fastauth
 from uuid import UUID
 from fastapi.security import OAuth2PasswordRequestForm
 from fastapi import Depends, Body
-from fastauth.models import User, JWTToken, PasswordReset
+from fastauth.models import User, PasswordReset
 from typing import List
 from fastapi.exceptions import HTTPException
+
+from fastauth.authentication import Authentication
 
 
 def AuthRoutes(database: fastauth._Redis, router: fastauth._APIRouter):
