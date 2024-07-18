@@ -6,7 +6,7 @@ from fastauth.models import User, PasswordReset
 from typing import List
 from fastapi.exceptions import HTTPException
 
-from fastauth.sort import Authentication
+from fastauth.authentication import Authentication
 
 
 def AuthRoutes(database: fastauth._Redis, router: fastauth._APIRouter):
