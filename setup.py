@@ -15,7 +15,7 @@ setup(
     ],
     extras_require={
         "dev": [
-            "pytest~=8.4.0",
+            "pytest~=9.0.3",
             "pipreqs~=0.5.0",
             "fakeredis~=2.35.0",
             "pytest-cov~=5.0.0"
