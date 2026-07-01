@@ -8,7 +8,7 @@ setup(
     version='0.1.0',
     packages=find_packages(),
     install_requires=[
-        'fastapi~=0.138.2',
+        'fastapi~=0.139.0',
         'PyJWT~=2.13.0',
         'redis~=5.3.1',
         'passlib~=1.7.4'
