@@ -10,7 +10,7 @@ setup(
     install_requires=[
         'fastapi~=0.139.1',
         'PyJWT~=2.13.0',
-        'redis~=5.3.1',
+        'redis~=8.0.1',
         'passlib~=1.7.4'
     ],
     extras_require={
